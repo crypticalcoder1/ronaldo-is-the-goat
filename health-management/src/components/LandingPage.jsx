@@ -16,21 +16,21 @@ const LandingPage = () => {
       content: (
         <div className="space-y-8 text-left max-w-2xl mx-auto">
           <div className="feature-item">
-            <h3 className="text-3xl font-bold">🌟 Doctor Dashboard</h3>
-            <p className="text-lg">
-              Manage appointments, billing, and patient records efficiently.
+            <h3 className="text-3xl font-bold font-poppins">Doctor Dashboard</h3>
+            <p className="text-lg font-open-sans">
+              Efficiently manage appointments, billing, and patient records with our intuitive interface.
             </p>
           </div>
           <div className="feature-item">
-            <h3 className="text-3xl font-bold">🌟 Patient Dashboard</h3>
-            <p className="text-lg">
-              Book appointments, view medical history, and pay bills seamlessly.
+            <h3 className="text-3xl font-bold font-poppins">Patient Dashboard</h3>
+            <p className="text-lg font-open-sans">
+              Book appointments, view your medical history, and pay bills seamlessly, all in one place.
             </p>
           </div>
           <div className="feature-item">
-            <h3 className="text-3xl font-bold">🌟 Admin Dashboard</h3>
-            <p className="text-lg">
-              Manage doctors, assign roles, and oversee billing and records.
+            <h3 className="text-3xl font-bold font-poppins">Admin Dashboard</h3>
+            <p className="text-lg font-open-sans">
+              Effortlessly manage doctors, assign roles, and oversee billing and records for enhanced efficiency.
             </p>
           </div>
         </div>
@@ -40,12 +40,12 @@ const LandingPage = () => {
       title: 'About Us',
       content: (
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Our Commitment to Health Care</h2>
-          <p className="text-lg md:text-xl mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 font-poppins">Our Commitment to Health Care</h2>
+          <p className="text-lg md:text-xl mb-6 font-open-sans">
             At Pinnacle Health Care Services, we are dedicated to providing the highest quality healthcare management solutions.
             Our mission is to improve patient outcomes and enhance operational efficiency through innovative technology and compassionate care.
           </p>
-          <p className="text-lg md:text-xl">
+          <p className="text-lg md:text-xl font-open-sans">
             Join us in revolutionizing the healthcare experience for patients, doctors, and administrators alike.
           </p>
         </div>
@@ -55,9 +55,9 @@ const LandingPage = () => {
       title: 'Contact Us',
       content: (
         <div className="text-center">
-          <p>Need help? Contact us at:</p>
-          <p className="mt-2">Phone: +1 123 456 7890</p>
-          <p className="mt-2">Email: support@healthcare.com</p>
+          <p className="font-open-sans">Need help? Contact us at:</p>
+          <p className="mt-2 font-open-sans">Phone: +1 123 456 7890</p>
+          <p className="mt-2 font-open-sans">Email: support@healthcare.com</p>
         </div>
       ),
     },
@@ -105,25 +105,22 @@ const LandingPage = () => {
       <section className="min-h-screen flex flex-col justify-between p-4">
         {/* Navbar */}
         <nav className="bg-white shadow-lg fixed w-full z-10 top-0 flex justify-between items-center p-4">
-          <div className="text-2xl font-bold text-blue-600">Pinnacle Health Care Services</div> {/* Title on the left */}
+          <div className="text-2xl font-bold text-blue-600 font-poppins">Pinnacle Health Care Services</div>
           <div className="hidden md:flex space-x-4">
-            {/* Links to different authentication routes */}
-            <Link to="/admin/auth" className="text-gray-600 hover:text-blue-600 transition">Admin Login</Link>
-            <Link to="/patient/auth" className="text-gray-600 hover:text-blue-600 transition">Patient Login</Link>
-            <Link to="/doctor/auth" className="text-gray-600 hover:text-blue-600 transition" style={{ marginRight: '20px' }}>Doctor Login</Link>
+            <Link to="/admin/auth" className="text-gray-600 hover:text-blue-600 transition font-open-sans">Admin Login</Link>
+            <Link to="/patient/auth" className="text-gray-600 hover:text-blue-600 transition font-open-sans">Patient Login</Link>
+            <Link to="/doctor/auth" className="text-gray-600 hover:text-blue-600 transition font-open-sans" style={{ marginRight: '20px' }}>Doctor Login</Link>
           </div>
         </nav>
 
         {/* Content Area */}
         <div className="flex-grow flex flex-col items-center justify-center text-black p-4 bg-opacity-90">
-          {/* Displaying the current section title and content */}
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center" style={{ color: getTextColor() }}>
             {sections[currentSection].title}
           </h1>
           <div className="text-lg md:text-xl mb-10 text-center" style={{ color: getTextColor() }}>
             {sections[currentSection].content}
           </div>
-          {/* Next button to navigate through sections */}
           <button
             onClick={handleNext}
             className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg transition hover:shadow-xl transform hover:scale-105"
