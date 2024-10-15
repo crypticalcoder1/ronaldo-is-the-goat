@@ -7,6 +7,10 @@ import DoctorAuth from './components/DoctorAuth'; // Import Doctor Auth componen
 import AdminDashboard from './components/AdminDashboard';
 import DoctorDashboard from './components/DoctorDashboard';
 import PatientDashboard from './components/PatientDashboard';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 
 function App() {
   return (
